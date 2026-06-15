@@ -111,7 +111,9 @@
             groupBox4.Size = new Size(447, 423);
             groupBox4.TabIndex = 44;
             groupBox4.TabStop = false;
-            groupBox4.Text = "Результаты накопления и обработки";
+//            groupBox4.Text = "Результаты накопления и обработки";
+            groupBox4.Text = Localization.GetText("FA_groupBox4");
+            
             // 
             // DistributionTimeFilter
             // 
@@ -140,7 +142,8 @@
             label1.Name = "label1";
             label1.Size = new Size(159, 23);
             label1.TabIndex = 99;
-            label1.Text = "Время накопления";
+//            label1.Text = "Время накопления";
+            label1.Text = Localization.GetText("FA_label1");
             // 
             // textBoxSigma
             // 
@@ -270,7 +273,8 @@
             label16.Name = "label16";
             label16.Size = new Size(178, 23);
             label16.TabIndex = 44;
-            label16.Text = "Среднеквадратичное";
+//            label16.Text = "Среднеквадратичное";
+            label16.Text = Localization.GetText("FA_label16");
             // 
             // label31
             // 
@@ -280,7 +284,8 @@
             label31.Name = "label31";
             label31.Size = new Size(102, 23);
             label31.TabIndex = 63;
-            label31.Text = "отклонение";
+//            label31.Text = "отклонение";
+            label31.Text = Localization.GetText("FA_label31");
             // 
             // label18
             // 
@@ -290,7 +295,8 @@
             label18.Name = "label18";
             label18.Size = new Size(90, 23);
             label18.TabIndex = 47;
-            label18.Text = "ожидание";
+//            label18.Text = "ожидание";
+            label18.Text = Localization.GetText("FA_label18");
             // 
             // label17
             // 
@@ -300,7 +306,8 @@
             label17.Name = "label17";
             label17.Size = new Size(174, 23);
             label17.TabIndex = 45;
-            label17.Text = "Количество событий";
+//            label17.Text = "Количество событий";
+            label17.Text = Localization.GetText("FA_label17");
             // 
             // label15
             // 
@@ -310,7 +317,8 @@
             label15.Name = "label15";
             label15.Size = new Size(96, 23);
             label15.TabIndex = 43;
-            label15.Text = "Дисперсия";
+//            label15.Text = "Дисперсия";
+            label15.Text = Localization.GetText("FA_label15");
             // 
             // label12
             // 
@@ -320,7 +328,8 @@
             label12.Name = "label12";
             label12.Size = new Size(142, 23);
             label12.TabIndex = 42;
-            label12.Text = "Математическое";
+//            label12.Text = "Математическое";
+            label12.Text = Localization.GetText("FA_label12");
             // 
             // groupBox1
             // 
@@ -337,7 +346,8 @@
             groupBox1.Size = new Size(710, 318);
             groupBox1.TabIndex = 42;
             groupBox1.TabStop = false;
-            groupBox1.Text = "График скорости счёта";
+//            groupBox1.Text = "График скорости счёта";
+            groupBox1.Text = Localization.GetText("FA_groupBox1");
             // 
             // ButtonNavEnd
             // 
@@ -456,7 +466,8 @@
             groupBox2.Size = new Size(710, 318);
             groupBox2.TabIndex = 43;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Распределение случайной величины";
+//            groupBox2.Text = "Распределение случайной величины";
+            groupBox2.Text = Localization.GetText("FA_groupBox2");
             // 
             // chartDistribution
             // 
@@ -518,7 +529,8 @@
             groupBox3.Size = new Size(447, 208);
             groupBox3.TabIndex = 46;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Выбор интервала данных";
+//            groupBox3.Text = "Выбор интервала данных";
+            groupBox3.Text = Localization.GetText("FA_groupBox3");
             // 
             // ButtonDistrExport
             // 
@@ -535,7 +547,8 @@
             ButtonDistrExport.RoundingEnable = true;
             ButtonDistrExport.Size = new Size(132, 39);
             ButtonDistrExport.TabIndex = 103;
-            ButtonDistrExport.Text = "Экспорт CSV";
+//            ButtonDistrExport.Text = "Экспорт CSV";
+            ButtonDistrExport.Text = Localization.GetText("FA_ButtonDistrExport");
             ButtonDistrExport.UseVisualStyleBackColor = false;
             ButtonDistrExport.UseZoomEffectOnHover = true;
             ButtonDistrExport.Click += ButtonDistrExport_Click;
@@ -548,7 +561,8 @@
             label3.Name = "label3";
             label3.Size = new Size(47, 23);
             label3.TabIndex = 102;
-            label3.Text = "Дата";
+//            label3.Text = "Дата";
+            label3.Text = Localization.GetText("FA_label3");
             // 
             // ButtonDistrRefresh
             // 
@@ -565,7 +579,8 @@
             ButtonDistrRefresh.RoundingEnable = true;
             ButtonDistrRefresh.Size = new Size(132, 39);
             ButtonDistrRefresh.TabIndex = 101;
-            ButtonDistrRefresh.Text = "Обновить";
+            //ButtonDistrRefresh.Text = "Обновить";
+            ButtonDistrRefresh.Text = Localization.GetText("FA_ButtonDistrRefresh");
             ButtonDistrRefresh.UseVisualStyleBackColor = false;
             ButtonDistrRefresh.UseZoomEffectOnHover = true;
             ButtonDistrRefresh.Click += ButtonDistrRefresh_Click;
@@ -597,7 +612,8 @@
             label2.Name = "label2";
             label2.Size = new Size(69, 23);
             label2.TabIndex = 99;
-            label2.Text = "Начало";
+//            label2.Text = "Начало";
+            label2.Text = Localization.GetText("FA_label2");
             // 
             // LabelEndTime
             // 
@@ -626,7 +642,8 @@
             label6.Name = "label6";
             label6.Size = new Size(99, 23);
             label6.TabIndex = 45;
-            label6.Text = "Окончание";
+            //label6.Text = "Окончание";
+            label6.Text = Localization.GetText("FA_label6");
             // 
             // FormArchive
             // 

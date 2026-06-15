@@ -1,20 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+﻿using System.Data;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using static RadLab.ClassMonitoring;
 using static RadLab.ClassDistribution;
 using static RadLab.ClassDB;
-using System.Globalization;
 using static RadLab.ClassMonitoring.ChartMonitoring;
 using static RadLab.ClassMain;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static RadLab.ClassDevice;
 
 namespace RadLab
@@ -40,6 +31,9 @@ namespace RadLab
             {
                 chart = chartDistribution
             };
+
+            // Apply localization on form creation
+            ApplyLocalization();
         }
 
         private void FormArchive_Load(object sender, EventArgs e)
@@ -193,7 +187,7 @@ namespace RadLab
             Queue<PointsBuferT> BuferNow = FilterDistr.GetBufer();
             SaveFileDialog saveFileDialog1 = new()
             {
-                Title = "Сохранить данные в файл .csv",
+                Title = Localization.GetString("SaveCsvTitle"),
                 DefaultExt = "csv",
                 Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*",
                 FilterIndex = 1,
@@ -220,9 +214,35 @@ namespace RadLab
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка при сохранении файла");
+                    MessageBox.Show(Localization.GetString("SaveCsvError"));
                 }
             }
+        }
+
+        /// <summary>
+        /// Applies localization to all translatable controls on the Archive form.
+        /// Uses "FA_" prefix keys to avoid collisions with FormMain control names.
+        /// </summary>
+        private void ApplyLocalization()
+        {
+            groupBox1.Text = Localization.GetText("FA_groupBox1");
+            groupBox2.Text = Localization.GetText("FA_groupBox2");
+            groupBox3.Text = Localization.GetText("FA_groupBox3");
+            groupBox4.Text = Localization.GetText("FA_groupBox4");
+
+            label1.Text = Localization.GetText("FA_label1");
+            label2.Text = Localization.GetText("FA_label2");
+            label3.Text = Localization.GetText("FA_label3");
+            label6.Text = Localization.GetText("FA_label6");
+            label12.Text = Localization.GetText("FA_label12");
+            label15.Text = Localization.GetText("FA_label15");
+            label16.Text = Localization.GetText("FA_label16");
+            label17.Text = Localization.GetText("FA_label17");
+            label18.Text = Localization.GetText("FA_label18");
+            label31.Text = Localization.GetText("FA_label31");
+
+            ButtonDistrExport.Text = Localization.GetText("FA_ButtonDistrExport");
+            ButtonDistrRefresh.Text = Localization.GetText("FA_ButtonDistrRefresh");
         }
     }
 }

@@ -19,6 +19,7 @@ namespace RadLab
             public uint FilterDistr { get; set; } = 100;
             public float Coeff1 { get; set; } = 0.02F;
             public float Coeff2 { get; set; } = 0.2F;
+            public string Language { get; set; } = "ru";
     }
 
         public class ApplicationDbContext : DbContext
@@ -28,6 +29,13 @@ namespace RadLab
             public ApplicationDbContext()
             {
                 Database.EnsureCreated();
+                // Add Language column if it doesn't exist (migration for existing databases)
+                try
+                {
+                    Database.ExecuteSqlRaw("ALTER TABLE Settings ADD COLUMN Language TEXT NOT NULL DEFAULT 'ru'");
+                }
+                catch { /* Column already exists, ignore */ }
+                
                 int c = (from s in Settings
                          select s.Id).Count();
                 if (c == 0)
@@ -35,7 +43,7 @@ namespace RadLab
                     MainConfig DefaultSettings = new();
                     Settings.Add(DefaultSettings);
                     SaveChanges();
-                    MessageBox.Show("Загружены настройки по умолчанию");
+                    MessageBox.Show(Localization.GetString("DefaultSettingsLoaded"));
                 }
             }
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

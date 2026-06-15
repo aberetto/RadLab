@@ -1,5 +1,6 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 using RadLab.Controls;
+using static RadLab.Localization;
 
 namespace RadLab
 {
@@ -1255,22 +1256,33 @@ namespace RadLab
             // 
             // PictureConnectionStatus
             // 
-            PictureConnectionStatus.Location = new Point(463, 12);
+            PictureConnectionStatus.Location = new Point(425, 12);
             PictureConnectionStatus.Name = "PictureConnectionStatus";
             PictureConnectionStatus.Size = new Size(23, 23);
             PictureConnectionStatus.TabIndex = 74;
             PictureConnectionStatus.TabStop = false;
             PictureConnectionStatus.Paint += ConnectionStatusPaint;
+
+            //pictureHint.SetToolTip(this.PictureConnectionStatus, "Статус соединения");
+
+            // Optional configurations to improve user experience
+            //pictureHint.InitialDelay = 500;  // Time (ms) before hint appears
+            //pictureHint.AutoPopDelay = 5000; // Time (ms) hint stays visible
+            //pictureHint.IsBalloon = true;    // Changes look to a modern speech balloon
+
+
             // 
             // label33
             // 
             label33.AutoSize = true;
             label33.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label33.Location = new Point(338, 7);
+            label33.Location = new Point(300, 7);
             label33.Name = "label33";
             label33.Size = new Size(119, 25);
             label33.TabIndex = 72;
             label33.Text = "Соединение";
+            label33.Visible = false;
+
             // 
             // label14
             // 

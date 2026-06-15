@@ -19,6 +19,8 @@ namespace RadLab
     public partial class FormMain : Form
     {
         public SerialPortDetector Detector;
+        private Button ButtonLanguage;
+        private ToolTip toolTipConnectionStatus;
         readonly ChartMonitoring ChartMonitoring;
         readonly ChartDistribution ChartDistribution;
         Dictionary<string, string[]> PortNames = [];
@@ -28,7 +30,6 @@ namespace RadLab
         readonly Filter FilterDistr = new(0);
         float Coeff1, Coeff2;
         bool StartSimpleCounter = false;
-
         readonly int MinSizeStdW = 520; //=505+16
         readonly int MinSizeStdH = 390; //330; //310;
         int PrevWidthStandart;// = 520;    //600;
@@ -52,6 +53,24 @@ namespace RadLab
         {
             InitializeComponent();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+
+            // Create and configure language toggle button
+            ButtonLanguage = new Button
+            {
+                Font = new Font("Segoe UI", 9F, FontStyle.Bold),
+                Location = new Point(450, 10),
+                Name = "ButtonLanguage",
+                Size = new Size(40, 27),
+                Text = "En",
+                UseVisualStyleBackColor = true
+            };
+            ButtonLanguage.Click += ButtonLanguage_Click;
+            tabPage1.Controls.Add(ButtonLanguage);
+            // ...
+
+            toolTipConnectionStatus = new ToolTip();
+            toolTipConnectionStatus.SetToolTip(PictureConnectionStatus, label33.Text);
+
             Detector = new SerialPortDetector("RadLabDetector");
             Archive = new();
             ChartMonitoring = new()
@@ -353,7 +372,8 @@ namespace RadLab
                     };
                     AddPointToArchiveBuffer(t, Archive.ArchiveMonitoringBuffer, monitoringPoint);
 
-                    LabelCurrentTimeFilter.Text = FilterCPS.Count().ToString();// + "с";
+//                    LabelCurrentTimeFilter.Text = FilterCPS.Count().ToString();// + "с";
+                    LabelCurrentTimeFilter.Text = FilterCPS.Count().ToString();// + Localization.GetString("SecondsSuffix");
                     TextBoxCurrentCPS.Text = point.CntPerSec.ToString();
                     TextBoxAverageCPS.Text = Avg.ToString("F2");
                     TextBoxSumCPS.Text = FilterCPS.GetSum().ToString();
@@ -375,7 +395,8 @@ namespace RadLab
                     {
                         ChartDistribution.chart.Series[0].Points.AddXY(ch, FilterDistr.DistributionArray[ch]);
                     }
-                    LabelDistributionTimeFilter.Text = FilterDistr.Count().ToString() + "с";
+//                    LabelDistributionTimeFilter.Text = FilterDistr.Count().ToString() + "с";
+                    LabelDistributionTimeFilter.Text = FilterDistr.Count().ToString() + Localization.GetString("SecondsSuffix");
                     double Variance = FilterDistr.GetVariance();
                     textBoxMean.Text = FilterDistr.GetAverage().ToString("F2");
                     textBoxVariance.Text = Variance.ToString("F2");
@@ -397,14 +418,16 @@ namespace RadLab
             if (StopMonitoringFlag)
             {
                 StopMonitoringFlag = false;
-                ButtonStartStop.Text = "СТОП";
+//                ButtonStartStop.Text = "СТОП";
+                Localization.GetString("Stop");
             }
             else
             {
                 FilterCPS.Clear();
                 FilterDistr.Clear();
                 StopMonitoringFlag = true;
-                ButtonStartStop.Text = "ПУСК";
+//                ButtonStartStop.Text = "ПУСК";
+                Localization.GetString("Start");
             }
         }
 
@@ -582,6 +605,7 @@ namespace RadLab
                 e.TabPage.Controls.Add(rToggleSwitch1);
                 e.TabPage.Controls.Add(label33);
                 e.TabPage.Controls.Add(PictureConnectionStatus);
+                e.TabPage.Controls.Add(ButtonLanguage);
                 CheckFormMode();
             }
         }
@@ -783,6 +807,94 @@ namespace RadLab
             LabelSimpleTime.Location = new Point((int)(LabelSimpleTimeLocationX * scaleX), (int)(LabelSimpleTimeLocationY * scaleY));
             label34.Location = new Point((int)(label34LocationX * scaleX), (int)(label34LocationY * scaleY));  //117
             label1.Location = new Point((int)(label1LocationX * scaleX), (int)(label1LocationY * scaleY));
+        }
+        /// <summary>
+        /// Handles the language toggle button click.
+        /// Switches language, saves to DB, and applies localization to all controls.
+        /// </summary>
+        private void ButtonLanguage_Click(object? sender, EventArgs e)
+        {
+            Localization.ToggleLanguage();
+
+            // Save language to database
+            MainConfig Config = LoadConfig();
+            Config.Language = Localization.CurrentLanguage;
+            SaveConfig(Config);
+
+            ApplyLocalization();
+        }
+        /// <summary>
+        /// Applies localization to all translatable controls on the form.
+        /// </summary>
+        private void ApplyLocalization()
+        {
+            // Update language button text
+            ButtonLanguage.Text = Localization.LanguageButtonText;
+
+            // Apply translations to FormMain controls
+            groupBox1.Text = Localization.GetText("groupBox1");
+            groupBox2.Text = Localization.GetText("groupBox2");
+            groupBox3.Text = Localization.GetText("groupBox3");
+            groupBox4.Text = Localization.GetText("groupBox4");
+
+            label1.Text = Localization.GetText("label1");
+            label2.Text = Localization.GetText("label2");
+            label3.Text = Localization.GetText("label3");
+            label4.Text = Localization.GetText("label4");
+            label5.Text = Localization.GetText("label5");
+            label6.Text = Localization.GetText("label6");
+            label7.Text = Localization.GetText("label7");
+            label8.Text = Localization.GetText("label8");
+            label9.Text = Localization.GetText("label9");
+            label10.Text = Localization.GetText("label10");
+            label11.Text = Localization.GetText("label11");
+            label12.Text = Localization.GetText("label12");
+            label13.Text = Localization.GetText("label13");
+            label14.Text = Localization.GetText("label14");
+            label15.Text = Localization.GetText("label15");
+            label16.Text = Localization.GetText("label16");
+            label17.Text = Localization.GetText("label17");
+            label18.Text = Localization.GetText("label18");
+            label19.Text = Localization.GetText("label19");
+            label20.Text = Localization.GetText("label20");
+            label21.Text = Localization.GetText("label21");
+            label22.Text = Localization.GetText("label22");
+            label23.Text = Localization.GetText("label23");
+            label24.Text = Localization.GetText("label24");
+            label25.Text = Localization.GetText("label25");
+            label26.Text = Localization.GetText("label26");
+            label27.Text = Localization.GetText("label27");
+            label28.Text = Localization.GetText("label28");
+            label29.Text = Localization.GetText("label29");
+            label30.Text = Localization.GetText("label30");
+            label31.Text = Localization.GetText("label31");
+            label32.Text = Localization.GetText("label32");
+            label33.Text = Localization.GetText("label33");
+            toolTipConnectionStatus.SetToolTip(PictureConnectionStatus, label33.Text);
+            label34.Text = Localization.GetText("label34");
+            label35.Text = Localization.GetText("label35");
+            label36.Text = Localization.GetText("label36");
+            label37.Text = Localization.GetText("label37");
+
+            // Buttons - preserve current state (СТОП/ПУСК) based on StopMonitoringFlag
+            ButtonStartStop.Text = StopMonitoringFlag
+                ? Localization.GetString("Start")
+                : Localization.GetString("Stop");
+            ButtonDistrArchive.Text = Localization.GetText("ButtonDistrArchive");
+            ButtonDistrExport.Text = Localization.GetText("ButtonDistrExport");
+            ButtonDistrReset.Text = Localization.GetText("ButtonDistrReset");
+            ButtonSimpleStop.Text = Localization.GetText("ButtonSimpleStop");
+            ButtonSimpleStart.Text = Localization.GetText("ButtonSimpleStart");
+
+            // Tab pages
+            tabPage1.Text = Localization.GetText("tabPage1");
+            tabPage2.Text = Localization.GetText("tabPage2");
+
+            // Update form title
+            CheckFormMode();
+
+            // Update dynamic labels with suffix
+            LabelDistributionTimeFilter.Text = FilterDistr.Count().ToString() + Localization.GetString("SecondsSuffix");
         }
 
 

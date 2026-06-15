@@ -1,0 +1,449 @@
+using System;
+using System.Collections.Generic;
+
+namespace RadLab
+{
+    /// <summary>
+    /// Localization system supporting Russian (ru) and English (en) languages.
+    /// Stores translations as key-value pairs where key = control Name, value = translated text.
+    /// </summary>
+    public static class Localization
+    {
+        public const string LANG_RU = "ru";
+        public const string LANG_EN = "en";
+
+        private static string _currentLanguage = LANG_RU;
+
+        /// <summary>
+        /// Current active language code ("ru" or "en").
+        /// </summary>
+        public static string CurrentLanguage
+        {
+            get => _currentLanguage;
+            set
+            {
+                if (value == LANG_RU || value == LANG_EN)
+                    _currentLanguage = value;
+            }
+        }
+
+        /// <summary>
+        /// Returns the display text for the language toggle button.
+        /// Shows the opposite language (the one you can switch to).
+        /// </summary>
+        public static string LanguageButtonText => _currentLanguage == LANG_RU ? "En" : "Ру";
+
+        // Dictionary: control Name -> translated text
+        private static readonly Dictionary<string, Dictionary<string, string>> Translations = new()
+        {
+            // ============================================================
+            // FormMain controls
+            // ============================================================
+            ["groupBox1"] = new()
+            {
+                [LANG_RU] = "График скорости счёта",
+                [LANG_EN] = "Count Rate Chart"
+            },
+            ["groupBox2"] = new()
+            {
+                [LANG_RU] = "Распределение случайной величины",
+                [LANG_EN] = "Random Variable Distribution"
+            },
+            ["groupBox3"] = new()
+            {
+                [LANG_RU] = "Управление",
+                [LANG_EN] = "Control"
+            },
+            ["groupBox4"] = new()
+            {
+                [LANG_RU] = "Результаты накопления и обработки",
+                [LANG_EN] = "Accumulation and Processing Results"
+            },
+            ["label1"] = new()
+            {
+                [LANG_RU] = "Время счёта, с",
+                [LANG_EN] = "Count Time, s"
+            },
+            ["label2"] = new()
+            {
+                [LANG_RU] = "за",
+                [LANG_EN] = "for"
+            },
+            ["label3"] = new()
+            {
+                [LANG_RU] = "Мновенная скорость счёта, имп./с:",
+                [LANG_EN] = "Instantaneous count rate, imp./s:"
+            },
+            ["label4"] = new()
+            {
+                [LANG_RU] = "имп/с",
+                [LANG_EN] = "imp/s"
+            },
+            ["label5"] = new()
+            {
+                [LANG_RU] = "=",
+                [LANG_EN] = "="
+            },
+            ["label6"] = new()
+            {
+                [LANG_RU] = "Время фильтра:",
+                [LANG_EN] = "Filter time:"
+            },
+            ["label7"] = new()
+            {
+                [LANG_RU] = "статистики:",
+                [LANG_EN] = "statistics:"
+            },
+            ["label8"] = new()
+            {
+                [LANG_RU] = "Таймер отсчёта:",
+                [LANG_EN] = "Countdown timer:"
+            },
+            ["label9"] = new()
+            {
+                [LANG_RU] = "Общее кол-во импульсов",
+                [LANG_EN] = "Total pulse count"
+            },
+            ["label10"] = new()
+            {
+                [LANG_RU] = "=",
+                [LANG_EN] = "="
+            },
+            ["label11"] = new()
+            {
+                [LANG_RU] = "с",
+                [LANG_EN] = "s"
+            },
+            ["label12"] = new()
+            {
+                [LANG_RU] = "Математическое",
+                [LANG_EN] = "Mathematical"
+            },
+            ["label13"] = new()
+            {
+                [LANG_RU] = "с",
+                [LANG_EN] = "s"
+            },
+            ["label14"] = new()
+            {
+                [LANG_RU] = "Расширенный режим",
+                [LANG_EN] = "Advanced Mode"
+            },
+            ["label15"] = new()
+            {
+                [LANG_RU] = "Дисперсия",
+                [LANG_EN] = "Variance"
+            },
+            ["label16"] = new()
+            {
+                [LANG_RU] = "Среднеквадратичное",
+                [LANG_EN] = "Standard"
+            },
+            ["label17"] = new()
+            {
+                [LANG_RU] = "Количество событий",
+                [LANG_EN] = "Number of events"
+            },
+            ["label18"] = new()
+            {
+                [LANG_RU] = "ожидание",
+                [LANG_EN] = "expectation"
+            },
+            ["label19"] = new()
+            {
+                [LANG_RU] = "Плотность потока",
+                [LANG_EN] = "Flux density"
+            },
+            ["label20"] = new()
+            {
+                [LANG_RU] = "МАЭД, мкЗв/ч",
+                [LANG_EN] = "MAED, μSv/h"
+            },
+            ["label21"] = new()
+            {
+                [LANG_RU] = "1/(мин ⋅см2)",
+                [LANG_EN] = "1/(min⋅cm²)"
+            },
+            ["label22"] = new()
+            {
+                [LANG_RU] = "Коэф.",
+                [LANG_EN] = "Coeff."
+            },
+            ["label23"] = new()
+            {
+                [LANG_RU] = "b",
+                [LANG_EN] = "b"
+            },
+            ["label24"] = new()
+            {
+                [LANG_RU] = "g",
+                [LANG_EN] = "g"
+            },
+            ["label25"] = new()
+            {
+                [LANG_RU] = "Коэф.",
+                [LANG_EN] = "Coeff."
+            },
+            ["label26"] = new()
+            {
+                [LANG_RU] = "Средняя",
+                [LANG_EN] = "Average"
+            },
+            ["label27"] = new()
+            {
+                [LANG_RU] = "скорость",
+                [LANG_EN] = "rate"
+            },
+            ["label28"] = new()
+            {
+                [LANG_RU] = "счёта",
+                [LANG_EN] = "count"
+            },
+            ["label29"] = new()
+            {
+                [LANG_RU] = "×",
+                [LANG_EN] = "×"
+            },
+            ["label30"] = new()
+            {
+                [LANG_RU] = "c:",
+                [LANG_EN] = "s:"
+            },
+            ["label31"] = new()
+            {
+                [LANG_RU] = "отклонение",
+                [LANG_EN] = "deviation"
+            },
+            ["label32"] = new()
+            {
+                [LANG_RU] = "накопления",
+                [LANG_EN] = "accumulation"
+            },
+            ["label33"] = new()
+            {
+                [LANG_RU] = "Статус соединения",
+                [LANG_EN] = "Connection status"
+            },
+            ["label34"] = new()
+            {
+                [LANG_RU] = "Скорость счёта, имп./с",
+                [LANG_EN] = "Count Rate, imp./s"
+            },
+            ["label35"] = new()
+            {
+                [LANG_RU] = "Расширенный режим",
+                [LANG_EN] = "Advanced Mode"
+            },
+            ["label36"] = new()
+            {
+                [LANG_RU] = "Соединение",
+                [LANG_EN] = "Connection"
+            },
+            ["label37"] = new()
+            {
+                [LANG_RU] = "Время",
+                [LANG_EN] = "Time"
+            },
+            ["ButtonStartStop"] = new()
+            {
+                [LANG_RU] = "СТОП",
+                [LANG_EN] = "STOP"
+            },
+            ["ButtonDistrArchive"] = new()
+            {
+                [LANG_RU] = "Архив",
+                [LANG_EN] = "Archive"
+            },
+            ["ButtonDistrExport"] = new()
+            {
+                [LANG_RU] = "Экспорт CSV",
+                [LANG_EN] = "Export CSV"
+            },
+            ["ButtonDistrReset"] = new()
+            {
+                [LANG_RU] = "Сброс",
+                [LANG_EN] = "Reset"
+            },
+            ["ButtonSimpleStop"] = new()
+            {
+                [LANG_RU] = "СТОП",
+                [LANG_EN] = "STOP"
+            },
+            ["ButtonSimpleStart"] = new()
+            {
+                [LANG_RU] = "ПУСК",
+                [LANG_EN] = "START"
+            },
+            ["tabPage1"] = new()
+            {
+                [LANG_RU] = "Simple",
+                [LANG_EN] = "Simple"
+            },
+            ["tabPage2"] = new()
+            {
+                [LANG_RU] = "Advance",
+                [LANG_EN] = "Advance"
+            },
+
+            // ============================================================
+            // FormArchive controls
+            // ============================================================
+            ["FA_groupBox1"] = new()
+            {
+                [LANG_RU] = "График скорости счёта",
+                [LANG_EN] = "Count Rate Chart"
+            },
+            ["FA_groupBox2"] = new()
+            {
+                [LANG_RU] = "Распределение случайной величины",
+                [LANG_EN] = "Random Variable Distribution"
+            },
+            ["FA_groupBox3"] = new()
+            {
+                [LANG_RU] = "Выбор интервала данных",
+                [LANG_EN] = "Data Interval Selection"
+            },
+            ["FA_groupBox4"] = new()
+            {
+                [LANG_RU] = "Результаты накопления и обработки",
+                [LANG_EN] = "Accumulation and Processing Results"
+            },
+            ["FA_label1"] = new()
+            {
+                [LANG_RU] = "Время накопления",
+                [LANG_EN] = "Accumulation Time"
+            },
+            ["FA_label2"] = new()
+            {
+                [LANG_RU] = "Начало",
+                [LANG_EN] = "Start"
+            },
+            ["FA_label3"] = new()
+            {
+                [LANG_RU] = "Дата",
+                [LANG_EN] = "Date"
+            },
+            ["FA_label6"] = new()
+            {
+                [LANG_RU] = "Окончание",
+                [LANG_EN] = "End"
+            },
+            ["FA_label12"] = new()
+            {
+                [LANG_RU] = "Математическое",
+                [LANG_EN] = "Mathematical"
+            },
+            ["FA_label15"] = new()
+            {
+                [LANG_RU] = "Дисперсия",
+                [LANG_EN] = "Variance"
+            },
+            ["FA_label16"] = new()
+            {
+                [LANG_RU] = "Среднеквадратичное",
+                [LANG_EN] = "Standard"
+            },
+            ["FA_label17"] = new()
+            {
+                [LANG_RU] = "Количество событий",
+                [LANG_EN] = "Number of events"
+            },
+            ["FA_label18"] = new()
+            {
+                [LANG_RU] = "ожидание",
+                [LANG_EN] = "expectation"
+            },
+            ["FA_label31"] = new()
+            {
+                [LANG_RU] = "отклонение",
+                [LANG_EN] = "deviation"
+            },
+            ["FA_ButtonDistrExport"] = new()
+            {
+                [LANG_RU] = "Экспорт CSV",
+                [LANG_EN] = "Export CSV"
+            },
+            ["FA_ButtonDistrRefresh"] = new()
+            {
+                [LANG_RU] = "Обновить",
+                [LANG_EN] = "Refresh"
+            },
+        };
+
+        // ============================================================
+        // Non-control strings (used in code, not in designer)
+        // ============================================================
+        private static readonly Dictionary<string, Dictionary<string, string>> StringTranslations = new()
+        {
+            ["Stop"] = new()
+            {
+                [LANG_RU] = "СТОП",
+                [LANG_EN] = "STOP"
+            },
+            ["Start"] = new()
+            {
+                [LANG_RU] = "ПУСК",
+                [LANG_EN] = "START"
+            },
+            ["Auto"] = new()
+            {
+                [LANG_RU] = "Авто",
+                [LANG_EN] = "Auto"
+            },
+            ["SecondsSuffix"] = new()
+            {
+                [LANG_RU] = "с",
+                [LANG_EN] = "s"
+            },
+            ["DefaultSettingsLoaded"] = new()
+            {
+                [LANG_RU] = "Загружены настройки по умолчанию",
+                [LANG_EN] = "Default settings loaded"
+            },
+            ["SaveCsvTitle"] = new()
+            {
+                [LANG_RU] = "Сохранить данные в файл .csv",
+                [LANG_EN] = "Save data to .csv file"
+            },
+            ["SaveCsvError"] = new()
+            {
+                [LANG_RU] = "Ошибка при сохранении файла",
+                [LANG_EN] = "Error saving file"
+            },
+        };
+
+        /// <summary>
+        /// Get translated text for a control by its Name.
+        /// </summary>
+        public static string GetText(string controlName)
+        {
+            if (Translations.TryGetValue(controlName, out var langDict))
+            {
+                if (langDict.TryGetValue(_currentLanguage, out var text))
+                    return text;
+            }
+            return controlName; // fallback: return key name
+        }
+
+        /// <summary>
+        /// Get translated string by key (for non-control strings).
+        /// </summary>
+        public static string GetString(string key)
+        {
+            if (StringTranslations.TryGetValue(key, out var langDict))
+            {
+                if (langDict.TryGetValue(_currentLanguage, out var text))
+                    return text;
+            }
+            return key; // fallback: return key name
+        }
+
+        /// <summary>
+        /// Toggle current language between "ru" and "en".
+        /// </summary>
+        public static void ToggleLanguage()
+        {
+            _currentLanguage = _currentLanguage == LANG_RU ? LANG_EN : LANG_RU;
+        }
+    }
+}

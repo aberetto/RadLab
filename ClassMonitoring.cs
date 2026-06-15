@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.IO;
-using System.IO.Compression;
-using System.Linq;
-using System.Runtime.Intrinsics.Arm;
-using System.Runtime.Intrinsics.X86;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms.DataVisualization.Charting;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Windows.Forms.DataVisualization.Charting;
 
 namespace RadLab
 {
@@ -512,7 +501,7 @@ namespace RadLab
                     Graphics g = e.Graphics;
                     Font DrawFont = new("Arial", 11.25F, FontStyle.Bold); ;
                     Brush DrawBrush = Brushes.Black;
-                    string Txt = "Авто";
+                    string Txt = Localization.GetString("Auto");
 
                     float StrWidth = g.MeasureString(Txt, DrawFont).Width;
                     float Width = StrWidth;
