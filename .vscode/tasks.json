@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "dotnet",
+			"task": "build z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\RadLab.csproj",
+			"file": "z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\RadLab.csproj",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "dotnet: build z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\RadLab.csproj"
+		}
+	]
+}

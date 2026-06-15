@@ -1,0 +1,3 @@
+Z:\3 НИОКР\3-4 ОКР\2024\Предварительные проработки\Кооперация с Махневым\Software\Software\RadLab\RadLab\bin\Release\Publish\ReleaseMin\RadLab.pdb
+Z:\3 НИОКР\3-4 ОКР\2024\Предварительные проработки\Кооперация с Махневым\Software\Software\RadLab\RadLab\bin\Release\Publish\ReleaseMin\e_sqlite3.dll
+Z:\3 НИОКР\3-4 ОКР\2024\Предварительные проработки\Кооперация с Махневым\Software\Software\RadLab\RadLab\bin\Release\Publish\ReleaseMin\RadLab.exe
