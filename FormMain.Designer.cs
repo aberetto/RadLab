@@ -54,7 +54,6 @@ namespace RadLab
             ToolTipComboBoxPortName = new ToolTip(components);
             label3 = new Label();
             label6 = new Label();
-            label7 = new Label();
             label9 = new Label();
             label10 = new Label();
             label11 = new Label();
@@ -67,7 +66,6 @@ namespace RadLab
             ButtonDistrExport = new RButton();
             ButtonDistrReset = new RButton();
             ButtonStartStop = new RButton();
-            label32 = new Label();
             label13 = new Label();
             LabelDistributionTimeFilter = new Label();
             label8 = new Label();
@@ -85,14 +83,12 @@ namespace RadLab
             TextBoxCoeff1 = new RTextBox();
             textBoxMean = new RLabel();
             label24 = new Label();
-            label21 = new Label();
             label16 = new Label();
             TextBoxCoeff2 = new RTextBox();
             TextBoxResult2 = new RLabel();
             label4 = new Label();
             label20 = new Label();
             label12 = new Label();
-            label31 = new Label();
             TextBoxCurrentCPS = new RLabel();
             label26 = new Label();
             textBoxDistrSum = new RLabel();
@@ -102,10 +98,7 @@ namespace RadLab
             label15 = new Label();
             TextBoxSumCPS = new RLabel();
             label29 = new Label();
-            label27 = new Label();
             label17 = new Label();
-            label18 = new Label();
-            label28 = new Label();
             label2 = new Label();
             TextBoxAverageCPS = new RLabel();
             tabControl1 = new TabControl();
@@ -326,16 +319,6 @@ namespace RadLab
             label6.TabIndex = 14;
             label6.Text = "Время фильтра:";
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 11.25F);
-            label7.Location = new Point(3, 267);
-            label7.Name = "label7";
-            label7.Size = new Size(86, 20);
-            label7.TabIndex = 18;
-            label7.Text = "статистики:";
-            // 
             // label9
             // 
             label9.AutoSize = true;
@@ -385,11 +368,9 @@ namespace RadLab
             groupBox3.Controls.Add(ButtonDistrExport);
             groupBox3.Controls.Add(ButtonDistrReset);
             groupBox3.Controls.Add(ButtonStartStop);
-            groupBox3.Controls.Add(label32);
             groupBox3.Controls.Add(label13);
             groupBox3.Controls.Add(LabelDistributionTimeFilter);
             groupBox3.Controls.Add(label8);
-            groupBox3.Controls.Add(label7);
             groupBox3.Controls.Add(label6);
             groupBox3.Controls.Add(label11);
             groupBox3.Font = new Font("Segoe UI", 12.75F);
@@ -402,13 +383,15 @@ namespace RadLab
             // 
             // label37
             // 
-            label37.AutoSize = true;
+            label37.AutoSize = false;
             label37.Font = new Font("Segoe UI", 11.25F);
             label37.Location = new Point(3, 221);
             label37.Name = "label37";
-            label37.Size = new Size(54, 20);
+            //label37.Size = new Size(54, 20);
+            label37.Size = new Size(105, 66);
             label37.TabIndex = 88;
-            label37.Text = "Время";
+            label37.Text = "Время накопления статистики:";
+            label37.TextAlign = ContentAlignment.BottomLeft;
             // 
             // TextBoxTimeDistribution
             // 
@@ -533,16 +516,6 @@ namespace RadLab
             ButtonStartStop.UseZoomEffectOnHover = true;
             ButtonStartStop.Click += ButtonStartStop_Click;
             // 
-            // label32
-            // 
-            label32.AutoSize = true;
-            label32.Font = new Font("Segoe UI", 11.25F);
-            label32.Location = new Point(3, 244);
-            label32.Name = "label32";
-            label32.Size = new Size(93, 20);
-            label32.TabIndex = 46;
-            label32.Text = "накопления";
-            // 
             // label13
             // 
             label13.AutoSize = true;
@@ -592,7 +565,6 @@ namespace RadLab
             groupBox4.Controls.Add(TextBoxCoeff1);
             groupBox4.Controls.Add(textBoxMean);
             groupBox4.Controls.Add(label24);
-            groupBox4.Controls.Add(label21);
             groupBox4.Controls.Add(label10);
             groupBox4.Controls.Add(label16);
             groupBox4.Controls.Add(TextBoxCoeff2);
@@ -600,7 +572,6 @@ namespace RadLab
             groupBox4.Controls.Add(label4);
             groupBox4.Controls.Add(label20);
             groupBox4.Controls.Add(label12);
-            groupBox4.Controls.Add(label31);
             groupBox4.Controls.Add(TextBoxCurrentCPS);
             groupBox4.Controls.Add(label26);
             groupBox4.Controls.Add(textBoxDistrSum);
@@ -610,10 +581,7 @@ namespace RadLab
             groupBox4.Controls.Add(label15);
             groupBox4.Controls.Add(TextBoxSumCPS);
             groupBox4.Controls.Add(label29);
-            groupBox4.Controls.Add(label27);
             groupBox4.Controls.Add(label17);
-            groupBox4.Controls.Add(label18);
-            groupBox4.Controls.Add(label28);
             groupBox4.Controls.Add(label2);
             groupBox4.Controls.Add(TextBoxAverageCPS);
             groupBox4.Font = new Font("Segoe UI", 12.75F);
@@ -807,25 +775,16 @@ namespace RadLab
             label24.TabIndex = 54;
             label24.Text = "g";
             // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Segoe UI", 12.75F);
-            label21.Location = new Point(271, 196);
-            label21.Name = "label21";
-            label21.Size = new Size(111, 23);
-            label21.TabIndex = 50;
-            label21.Text = "1/(мин см2)";
-            // 
             // label16
             // 
-            label16.AutoSize = true;
+            label16.AutoSize = false;
             label16.Font = new Font("Segoe UI", 12.75F);
             label16.Location = new Point(3, 597);
             label16.Name = "label16";
-            label16.Size = new Size(178, 23);
+            label16.Size = new Size(178, 50);
             label16.TabIndex = 44;
-            label16.Text = "Среднеквадратичное";
+            label16.Text = "Среднеквадратичное отклонение";
+            label16.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // TextBoxCoeff2
             // 
@@ -890,23 +849,14 @@ namespace RadLab
             // 
             // label12
             // 
-            label12.AutoSize = true;
+            label12.AutoSize = false;
             label12.Font = new Font("Segoe UI", 12.75F);
             label12.Location = new Point(3, 445);
             label12.Name = "label12";
-            label12.Size = new Size(142, 23);
+            label12.Size = new Size(142, 50);
             label12.TabIndex = 42;
-            label12.Text = "Математическое";
-            // 
-            // label31
-            // 
-            label31.AutoSize = true;
-            label31.Font = new Font("Segoe UI", 12.75F);
-            label31.Location = new Point(3, 623);
-            label31.Name = "label31";
-            label31.Size = new Size(102, 23);
-            label31.TabIndex = 63;
-            label31.Text = "отклонение";
+            label12.Text = "Математическое ожидание";
+            label12.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // TextBoxCurrentCPS
             // 
@@ -929,13 +879,14 @@ namespace RadLab
             // 
             // label26
             // 
-            label26.AutoSize = true;
+            label26.AutoSize = false;
             label26.Font = new Font("Segoe UI", 12.75F);
-            label26.Location = new Point(3, 176);
+            label26.Location = new Point(3, 185);
             label26.Name = "label26";
-            label26.Size = new Size(77, 23);
+            label26.Size = new Size(97, 70);
             label26.TabIndex = 56;
-            label26.Text = "Средняя";
+            label26.Text = "Средняя скорость счёта";
+            label26.TextAlign = ContentAlignment.BottomLeft;
             // 
             // textBoxDistrSum
             // 
@@ -958,14 +909,15 @@ namespace RadLab
             // 
             // label19
             // 
-            label19.AutoSize = true;
+            label19.AutoSize = false;
             label19.Font = new Font("Segoe UI", 12.75F);
             label19.Location = new Point(245, 172);
             label19.Margin = new Padding(0);
             label19.Name = "label19";
-            label19.Size = new Size(151, 23);
+            label19.Size = new Size(160, 50);
             label19.TabIndex = 48;
-            label19.Text = "Плотность потока";
+            label19.Text = "Плотность потока, 1/(мин см2)";
+            label19.TextAlign = ContentAlignment.BottomCenter;
             // 
             // label5
             // 
@@ -1019,22 +971,14 @@ namespace RadLab
             // label29
             // 
             label29.AutoSize = true;
-            label29.Font = new Font("Symbol", 24F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label29.Location = new Point(107, 257);
+            //label29.Font = new Font("Symbol", 24F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label29.Font = new Font("Segoe UI", 12.75F);
+            //label29.Location = new Point(107, 257);
+            label29.Location = new Point(107, 270);
             label29.Name = "label29";
             label29.Size = new Size(36, 39);
             label29.TabIndex = 60;
-            label29.Text = "";
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.Font = new Font("Segoe UI", 12.75F);
-            label27.Location = new Point(3, 202);
-            label27.Name = "label27";
-            label27.Size = new Size(80, 23);
-            label27.TabIndex = 57;
-            label27.Text = "скорость";
+            label29.Text = "╳";
             // 
             // label17
             // 
@@ -1046,35 +990,16 @@ namespace RadLab
             label17.TabIndex = 45;
             label17.Text = "Количество событий";
             // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI", 12.75F);
-            label18.Location = new Point(3, 469);
-            label18.Name = "label18";
-            label18.Size = new Size(90, 23);
-            label18.TabIndex = 47;
-            label18.Text = "ожидание";
-            // 
-            // label28
-            // 
-            label28.AutoSize = true;
-            label28.Font = new Font("Segoe UI", 12.75F);
-            label28.Location = new Point(3, 228);
-            label28.Name = "label28";
-            label28.Size = new Size(53, 23);
-            label28.TabIndex = 58;
-            label28.Text = "счёта";
-            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label2.Location = new Point(104, 131);
+            label2.Location = new Point(94, 131);
             label2.Name = "label2";
-            label2.Size = new Size(30, 25);
+            label2.Size = new Size(40, 25);
             label2.TabIndex = 61;
             label2.Text = "за";
+            label2.TextAlign = ContentAlignment.MiddleRight;
             // 
             // TextBoxAverageCPS
             // 
@@ -1139,11 +1064,12 @@ namespace RadLab
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(320, 110);
+            label1.Location = new Point(310, 110);  //390-138/2
             label1.Name = "label1";
-            label1.Size = new Size(138, 25);
+            label1.Size = new Size(140, 25);
             label1.TabIndex = 83;
             label1.Text = "Время счёта, с";
+            label1.TextAlign = ContentAlignment.BottomCenter;
           
             // 
             // LabelSimpleTime
@@ -1262,15 +1188,6 @@ namespace RadLab
             PictureConnectionStatus.TabIndex = 74;
             PictureConnectionStatus.TabStop = false;
             PictureConnectionStatus.Paint += ConnectionStatusPaint;
-
-            //pictureHint.SetToolTip(this.PictureConnectionStatus, "Статус соединения");
-
-            // Optional configurations to improve user experience
-            //pictureHint.InitialDelay = 500;  // Time (ms) before hint appears
-            //pictureHint.AutoPopDelay = 5000; // Time (ms) hint stays visible
-            //pictureHint.IsBalloon = true;    // Changes look to a modern speech balloon
-
-
             // 
             // label33
             // 
@@ -1282,7 +1199,6 @@ namespace RadLab
             label33.TabIndex = 72;
             label33.Text = "Соединение";
             label33.Visible = false;
-
             // 
             // label14
             // 
@@ -1415,7 +1331,6 @@ namespace RadLab
         private Label label4;
         private Label label5;
         private Label label6;
-        private Label label7;
         private Label label9;
         private Label label10;
         private Label label11;
@@ -1430,23 +1345,17 @@ namespace RadLab
         private Label label8;
         private Label label13;
         private Label LabelDistributionTimeFilter;
-        private Label label18;
         private Label label20;
         private Label label19;
         private Label label22;
-        private Label label21;
-        private Label label28;
-        private Label label27;
         private Label label26;
         private Label label24;
         private Label label25;
         private Label label23;
         private Label label29;
-        private Label label31;
         private Label label30;
         private Button ButtonNavMinus;
         private Button ButtonNavPlus;
-        private Label label32;
         private Button ButtonNavEnd;
         private Button ButtonNavRight;
         private Button ButtonNavLeft;

@@ -48,8 +48,6 @@
             pictureBox1 = new PictureBox();
             pictureBox5 = new PictureBox();
             label16 = new Label();
-            label31 = new Label();
-            label18 = new Label();
             label17 = new Label();
             label15 = new Label();
             label12 = new Label();
@@ -99,8 +97,6 @@
             groupBox4.Controls.Add(pictureBox1);
             groupBox4.Controls.Add(pictureBox5);
             groupBox4.Controls.Add(label16);
-            groupBox4.Controls.Add(label31);
-            groupBox4.Controls.Add(label18);
             groupBox4.Controls.Add(label17);
             groupBox4.Controls.Add(label15);
             groupBox4.Controls.Add(label12);
@@ -267,36 +263,16 @@
             // 
             // label16
             // 
-            label16.AutoSize = true;
+            label16.AutoSize = false;
             label16.Font = new Font("Segoe UI", 12.75F);
             label16.Location = new Point(3, 333);
             label16.Name = "label16";
-            label16.Size = new Size(178, 23);
+            label16.Size = new Size(178, 50);
             label16.TabIndex = 44;
 //            label16.Text = "Среднеквадратичное";
             label16.Text = Localization.GetText("FA_label16");
-            // 
-            // label31
-            // 
-            label31.AutoSize = true;
-            label31.Font = new Font("Segoe UI", 12.75F);
-            label31.Location = new Point(3, 358);
-            label31.Name = "label31";
-            label31.Size = new Size(102, 23);
-            label31.TabIndex = 63;
-//            label31.Text = "отклонение";
-            label31.Text = Localization.GetText("FA_label31");
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI", 12.75F);
-            label18.Location = new Point(3, 213);
-            label18.Name = "label18";
-            label18.Size = new Size(90, 23);
-            label18.TabIndex = 47;
-//            label18.Text = "ожидание";
-            label18.Text = Localization.GetText("FA_label18");
+            label16.TextAlign = ContentAlignment.MiddleLeft;
+
             // 
             // label17
             // 
@@ -322,14 +298,16 @@
             // 
             // label12
             // 
-            label12.AutoSize = true;
+            label12.AutoSize = false;
             label12.Font = new Font("Segoe UI", 12.75F);
             label12.Location = new Point(3, 191);
             label12.Name = "label12";
-            label12.Size = new Size(142, 23);
+            label12.Size = new Size(142, 50);
             label12.TabIndex = 42;
 //            label12.Text = "Математическое";
             label12.Text = Localization.GetText("FA_label12");
+            label12.TextAlign = ContentAlignment.MiddleLeft;
+
             // 
             // groupBox1
             // 
@@ -688,8 +666,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox5;
         private Label label16;
-        private Label label31;
-        private Label label18;
         private Label label17;
         private Label label15;
         private Label label12;

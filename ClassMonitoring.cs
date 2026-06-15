@@ -500,20 +500,21 @@ namespace RadLab
                 {
                     Graphics g = e.Graphics;
                     Font DrawFont = new("Arial", 11.25F, FontStyle.Bold); ;
-                    Brush DrawBrush = Brushes.Black;
+                    //Brush DrawBrush = Brushes.Black;
+                    Brush DrawBrush = Brushes.LightGray;
                     string Txt = Localization.GetString("Auto");
 
                     float StrWidth = g.MeasureString(Txt, DrawFont).Width;
                     float Width = StrWidth;
                     float TxtHeight = g.MeasureString(Txt, DrawFont).Height;
-                    double xpos = chart.ChartAreas[0].AxisX.ValueToPixelPosition(chart.ChartAreas[0].AxisX.ScaleView.ViewMinimum); //50;
-                    double ypos = 30;
+                    double xpos = chart.ChartAreas[0].AxisX.ValueToPixelPosition(chart.ChartAreas[0].AxisX.ScaleView.ViewMinimum)+10; //50;
+                    double ypos = 25;
                     int x = (int)(xpos - Width / 2.0);
                     int y = (int)(ypos - TxtHeight);
 
                     Rectangle rect = new(x - 1, y - 1, (int)Width + 1, (int)TxtHeight + 2);
                     g.FillRectangle(Brushes.White, rect);
-                    g.DrawRectangle(Pens.Black, rect);
+                    g.DrawRectangle(Pens.LightGray, rect);
                     g.DrawString(Txt, DrawFont, DrawBrush, x, y);
                 }
 

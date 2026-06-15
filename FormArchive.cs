@@ -238,8 +238,6 @@ namespace RadLab
             label15.Text = Localization.GetText("FA_label15");
             label16.Text = Localization.GetText("FA_label16");
             label17.Text = Localization.GetText("FA_label17");
-            label18.Text = Localization.GetText("FA_label18");
-            label31.Text = Localization.GetText("FA_label31");
 
             ButtonDistrExport.Text = Localization.GetText("FA_ButtonDistrExport");
             ButtonDistrRefresh.Text = Localization.GetText("FA_ButtonDistrRefresh");

@@ -42,36 +42,36 @@ namespace RadLab
             ["groupBox1"] = new()
             {
                 [LANG_RU] = "График скорости счёта",
-                [LANG_EN] = "Count Rate Chart"
+                [LANG_EN] = "Count Rate Graph"
             },
             ["groupBox2"] = new()
             {
                 [LANG_RU] = "Распределение случайной величины",
-                [LANG_EN] = "Random Variable Distribution"
+                [LANG_EN] = "Random Variable Distribution Graph"
             },
             ["groupBox3"] = new()
             {
                 [LANG_RU] = "Управление",
-                [LANG_EN] = "Control"
+                [LANG_EN] = "Controls"
             },
             ["groupBox4"] = new()
             {
                 [LANG_RU] = "Результаты накопления и обработки",
-                [LANG_EN] = "Accumulation and Processing Results"
+                [LANG_EN] = "Measurement results"
             },
             ["label1"] = new()
             {
                 [LANG_RU] = "Время счёта, с",
-                [LANG_EN] = "Count Time, s"
+                [LANG_EN] = "Time elapsed, s"
             },
             ["label2"] = new()
             {
                 [LANG_RU] = "за",
-                [LANG_EN] = "for"
+                [LANG_EN] = "over"
             },
             ["label3"] = new()
             {
-                [LANG_RU] = "Мновенная скорость счёта, имп./с:",
+                [LANG_RU] = "Мгновенная скорость счёта, имп./с:",
                 [LANG_EN] = "Instantaneous count rate, imp./s:"
             },
             ["label4"] = new()
@@ -87,22 +87,17 @@ namespace RadLab
             ["label6"] = new()
             {
                 [LANG_RU] = "Время фильтра:",
-                [LANG_EN] = "Filter time:"
-            },
-            ["label7"] = new()
-            {
-                [LANG_RU] = "статистики:",
-                [LANG_EN] = "statistics:"
+                [LANG_EN] = "Averaging time:"
             },
             ["label8"] = new()
             {
                 [LANG_RU] = "Таймер отсчёта:",
-                [LANG_EN] = "Countdown timer:"
+                [LANG_EN] = "Time elapsed:"
             },
             ["label9"] = new()
             {
                 [LANG_RU] = "Общее кол-во импульсов",
-                [LANG_EN] = "Total pulse count"
+                [LANG_EN] = "Total number of counts"
             },
             ["label10"] = new()
             {
@@ -116,8 +111,8 @@ namespace RadLab
             },
             ["label12"] = new()
             {
-                [LANG_RU] = "Математическое",
-                [LANG_EN] = "Mathematical"
+                [LANG_RU] = "Математическое ожидание",
+                [LANG_EN] = "Expected value"
             },
             ["label13"] = new()
             {
@@ -136,33 +131,23 @@ namespace RadLab
             },
             ["label16"] = new()
             {
-                [LANG_RU] = "Среднеквадратичное",
-                [LANG_EN] = "Standard"
+                [LANG_RU] = "Среднеквадратичное отклонение",
+                [LANG_EN] = "Standard deviation"
             },
             ["label17"] = new()
             {
                 [LANG_RU] = "Количество событий",
                 [LANG_EN] = "Number of events"
             },
-            ["label18"] = new()
-            {
-                [LANG_RU] = "ожидание",
-                [LANG_EN] = "expectation"
-            },
             ["label19"] = new()
             {
-                [LANG_RU] = "Плотность потока",
-                [LANG_EN] = "Flux density"
+                [LANG_RU] = "Плотность потока, 1/(мин ⋅см²)",
+                [LANG_EN] = "Flux density, 1/(min⋅cm²)"
             },
             ["label20"] = new()
             {
                 [LANG_RU] = "МАЭД, мкЗв/ч",
                 [LANG_EN] = "MAED, μSv/h"
-            },
-            ["label21"] = new()
-            {
-                [LANG_RU] = "1/(мин ⋅см2)",
-                [LANG_EN] = "1/(min⋅cm²)"
             },
             ["label22"] = new()
             {
@@ -186,8 +171,8 @@ namespace RadLab
             },
             ["label26"] = new()
             {
-                [LANG_RU] = "Средняя",
-                [LANG_EN] = "Average"
+                [LANG_RU] = "Средняя скорость счёта",
+                [LANG_EN] = "Average count rate"
             },
             ["label27"] = new()
             {
@@ -199,25 +184,25 @@ namespace RadLab
                 [LANG_RU] = "счёта",
                 [LANG_EN] = "count"
             },
-            ["label29"] = new()
-            {
-                [LANG_RU] = "×",
-                [LANG_EN] = "×"
-            },
             ["label30"] = new()
             {
                 [LANG_RU] = "c:",
                 [LANG_EN] = "s:"
             },
-            ["label31"] = new()
+            ["label37"] = new()
             {
-                [LANG_RU] = "отклонение",
-                [LANG_EN] = "deviation"
+                [LANG_RU] = "Время накопления статистики:",
+                [LANG_EN] = "Measurement time:"
             },
             ["label32"] = new()
             {
                 [LANG_RU] = "накопления",
-                [LANG_EN] = "accumulation"
+                [LANG_EN] = "Measurement"
+            },
+            ["label7"] = new()
+            {
+                [LANG_RU] = "статистики:",
+                [LANG_EN] = "time:"
             },
             ["label33"] = new()
             {
@@ -238,11 +223,6 @@ namespace RadLab
             {
                 [LANG_RU] = "Соединение",
                 [LANG_EN] = "Connection"
-            },
-            ["label37"] = new()
-            {
-                [LANG_RU] = "Время",
-                [LANG_EN] = "Time"
             },
             ["ButtonStartStop"] = new()
             {
@@ -291,7 +271,7 @@ namespace RadLab
             ["FA_groupBox1"] = new()
             {
                 [LANG_RU] = "График скорости счёта",
-                [LANG_EN] = "Count Rate Chart"
+                [LANG_EN] = "Count Rate Graph"
             },
             ["FA_groupBox2"] = new()
             {
@@ -306,12 +286,12 @@ namespace RadLab
             ["FA_groupBox4"] = new()
             {
                 [LANG_RU] = "Результаты накопления и обработки",
-                [LANG_EN] = "Accumulation and Processing Results"
+                [LANG_EN] = "Measurement results"
             },
             ["FA_label1"] = new()
             {
                 [LANG_RU] = "Время накопления",
-                [LANG_EN] = "Accumulation Time"
+                [LANG_EN] = "Measurement time"
             },
             ["FA_label2"] = new()
             {
@@ -330,8 +310,8 @@ namespace RadLab
             },
             ["FA_label12"] = new()
             {
-                [LANG_RU] = "Математическое",
-                [LANG_EN] = "Mathematical"
+                [LANG_RU] = "Математическое ожидание",
+                [LANG_EN] = "Expected value"
             },
             ["FA_label15"] = new()
             {
@@ -340,24 +320,15 @@ namespace RadLab
             },
             ["FA_label16"] = new()
             {
-                [LANG_RU] = "Среднеквадратичное",
-                [LANG_EN] = "Standard"
+                [LANG_RU] = "Среднеквадратичное отклонение",
+                [LANG_EN] = "Standard deviation"
             },
             ["FA_label17"] = new()
             {
                 [LANG_RU] = "Количество событий",
                 [LANG_EN] = "Number of events"
             },
-            ["FA_label18"] = new()
-            {
-                [LANG_RU] = "ожидание",
-                [LANG_EN] = "expectation"
-            },
-            ["FA_label31"] = new()
-            {
-                [LANG_RU] = "отклонение",
-                [LANG_EN] = "deviation"
-            },
+
             ["FA_ButtonDistrExport"] = new()
             {
                 [LANG_RU] = "Экспорт CSV",
@@ -409,6 +380,16 @@ namespace RadLab
             {
                 [LANG_RU] = "Ошибка при сохранении файла",
                 [LANG_EN] = "Error saving file"
+            },
+            ["AdvancedMode"] = new()
+            {
+                [LANG_RU] = "Расширенный режим",
+                [LANG_EN] = "Advanced mode"
+            },
+            ["SimpleMode"] = new()
+            {
+                [LANG_RU] = "Упрощенный режим",
+                [LANG_EN] = "Simplified mode"
             },
         };
 

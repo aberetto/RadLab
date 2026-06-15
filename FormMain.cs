@@ -116,6 +116,8 @@ namespace RadLab
             ushort FilterDistrValue = (ushort)Config.FilterDistr;
             Coeff1 = Config.Coeff1;
             Coeff2 = Config.Coeff2;
+            Localization.CurrentLanguage = Config.Language;
+            ApplyLocalization();
             FilterCPS.ReSize(FilterCPSValue);
             FilterDistr.ReSize(FilterDistrValue);
 
@@ -620,7 +622,9 @@ namespace RadLab
                 this.MinimumSize = new Size(MinSizeExtW, MinSizeExtH);
                 this.Width = PrevWidthExt;
                 this.Height = PrevHeightExt;
-                this.Text = "RadLab [Расширенный режим]";
+                //this.Text = "RadLab [Расширенный режим]";
+                this.Text = "RadLab ["+Localization.GetString("AdvancedMode")+"]";
+                
             }
             else
             {
@@ -631,7 +635,8 @@ namespace RadLab
                 
                 this.Width = PrevWidthStandart;
                 this.Height = PrevHeightStandart;
-                this.Text = "RadLab [Стандартный режим]";
+                //this.Text = "RadLab [Стандартный режим]";
+                this.Text = "RadLab ["+Localization.GetString("SimpleMode")+"]";
             }
         }
 
@@ -843,7 +848,6 @@ namespace RadLab
             label4.Text = Localization.GetText("label4");
             label5.Text = Localization.GetText("label5");
             label6.Text = Localization.GetText("label6");
-            label7.Text = Localization.GetText("label7");
             label8.Text = Localization.GetText("label8");
             label9.Text = Localization.GetText("label9");
             label10.Text = Localization.GetText("label10");
@@ -854,21 +858,14 @@ namespace RadLab
             label15.Text = Localization.GetText("label15");
             label16.Text = Localization.GetText("label16");
             label17.Text = Localization.GetText("label17");
-            label18.Text = Localization.GetText("label18");
             label19.Text = Localization.GetText("label19");
             label20.Text = Localization.GetText("label20");
-            label21.Text = Localization.GetText("label21");
             label22.Text = Localization.GetText("label22");
             label23.Text = Localization.GetText("label23");
             label24.Text = Localization.GetText("label24");
             label25.Text = Localization.GetText("label25");
             label26.Text = Localization.GetText("label26");
-            label27.Text = Localization.GetText("label27");
-            label28.Text = Localization.GetText("label28");
-            label29.Text = Localization.GetText("label29");
             label30.Text = Localization.GetText("label30");
-            label31.Text = Localization.GetText("label31");
-            label32.Text = Localization.GetText("label32");
             label33.Text = Localization.GetText("label33");
             toolTipConnectionStatus.SetToolTip(PictureConnectionStatus, label33.Text);
             label34.Text = Localization.GetText("label34");
