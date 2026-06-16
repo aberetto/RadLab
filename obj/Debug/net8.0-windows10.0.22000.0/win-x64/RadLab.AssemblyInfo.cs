@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RadLab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+671928f9aed8fa3026bd9422df8f95c2d12a6460")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de1a4a0a36f8a16fc6c67fa8054a75ceffb98bb0")]
 [assembly: System.Reflection.AssemblyProductAttribute("RadLab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RadLab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

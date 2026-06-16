@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YYjxmB8maig=",
+  "dgSpecHash": "Ab9kXZWguNA=",
   "success": true,
-  "projectFilePath": "z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\RadLab.csproj",
+  "projectFilePath": "Z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\RadLab.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anegoda\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.6\\microsoft.data.sqlite.core.8.0.6.nupkg.sha512",
     "C:\\Users\\anegoda\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.6\\microsoft.entityframeworkcore.8.0.6.nupkg.sha512",

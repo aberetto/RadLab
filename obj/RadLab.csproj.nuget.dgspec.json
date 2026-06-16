@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\RadLab.csproj": {}
+    "Z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\RadLab.csproj": {}
   },
   "projects": {
-    "z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\RadLab.csproj": {
+    "Z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\RadLab.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\RadLab.csproj",
+        "projectUniqueName": "Z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\RadLab.csproj",
         "projectName": "RadLab",
-        "projectPath": "z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\RadLab.csproj",
+        "projectPath": "Z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\RadLab.csproj",
         "packagesPath": "C:\\Users\\anegoda\\.nuget\\packages\\",
-        "outputPath": "z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\obj\\",
+        "outputPath": "Z:\\3 НИОКР\\3-4 ОКР\\2024\\Предварительные проработки\\Кооперация с Махневым\\Software\\Software\\RadLab\\RadLab\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\anegoda\\AppData\\Roaming\\NuGet\\NuGet.Config"

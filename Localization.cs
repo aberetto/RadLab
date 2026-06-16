@@ -42,12 +42,12 @@ namespace RadLab
             ["groupBox1"] = new()
             {
                 [LANG_RU] = "График скорости счёта",
-                [LANG_EN] = "Count Rate Graph"
+                [LANG_EN] = "Count rate graph"
             },
             ["groupBox2"] = new()
             {
                 [LANG_RU] = "Распределение случайной величины",
-                [LANG_EN] = "Random Variable Distribution Graph"
+                [LANG_EN] = "Random variable distribution"
             },
             ["groupBox3"] = new()
             {
@@ -122,7 +122,7 @@ namespace RadLab
             ["label14"] = new()
             {
                 [LANG_RU] = "Расширенный режим",
-                [LANG_EN] = "Advanced Mode"
+                [LANG_EN] = "Advanced mode"
             },
             ["label15"] = new()
             {
@@ -142,12 +142,12 @@ namespace RadLab
             ["label19"] = new()
             {
                 [LANG_RU] = "Плотность потока, 1/(мин ⋅см²)",
-                [LANG_EN] = "Flux density, 1/(min⋅cm²)"
+                [LANG_EN] = "Particle fluence rate, 1/(min⋅cm²)"
             },
             ["label20"] = new()
             {
                 [LANG_RU] = "МАЭД, мкЗв/ч",
-                [LANG_EN] = "MAED, μSv/h"
+                [LANG_EN] = "Dose rate, μSv/h"
             },
             ["label22"] = new()
             {
@@ -217,7 +217,7 @@ namespace RadLab
             ["label35"] = new()
             {
                 [LANG_RU] = "Расширенный режим",
-                [LANG_EN] = "Advanced Mode"
+                [LANG_EN] = "Advanced mode"
             },
             ["label36"] = new()
             {
@@ -271,17 +271,17 @@ namespace RadLab
             ["FA_groupBox1"] = new()
             {
                 [LANG_RU] = "График скорости счёта",
-                [LANG_EN] = "Count Rate Graph"
+                [LANG_EN] = "Count rate graph"
             },
             ["FA_groupBox2"] = new()
             {
                 [LANG_RU] = "Распределение случайной величины",
-                [LANG_EN] = "Random Variable Distribution"
+                [LANG_EN] = "Random variable distribution"
             },
             ["FA_groupBox3"] = new()
             {
                 [LANG_RU] = "Выбор интервала данных",
-                [LANG_EN] = "Data Interval Selection"
+                [LANG_EN] = "Data interval selection"
             },
             ["FA_groupBox4"] = new()
             {
